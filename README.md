@@ -20,28 +20,28 @@ Now that we've talked about what a directive actually is, let's go into what an 
 If you've ever done a lot of JavaScript before, you would have come into contact with event listeners. These are functions that get called whenever a specific behaviour happens that we are looking out for. Either of the following might be familiar to you:
 
 ```js
-input.addEventListener('keydown', function (e) {
+input.addEventListener('click', function (e) {
 });
 
 // or
 
-input.onkeydown = function (e) {
+input.onclick = function (e) {
 };
 ```
 ```html
 <!-- or this -->
 
-<input onkeydown="myFunction()" />
+<input onclick="myFunction()" />
 ```
 
 These would all fire off of a function when a key was pressed inside of our input.
 
 ## Angular's equivalent
 
-Instead, in Angular, we use the built-in `ng-keydown` directive, and pass in the function we want to be called.
+Instead, in Angular, we use the built-in `ng-click` directive, and pass in the function we want to be called.
 
 ```html
-<input ng-keydown="vm.myFunction()" />
+<input ng-click="vm.myFunction()" />
 ```
 
 ## Why do we do this?
