@@ -34,7 +34,7 @@ input.onclick = function (e) {
 <input onclick="myFunction()" />
 ```
 
-These would all fire off of a function when a key was pressed inside of our input.
+These would all fire off of a function when a click was registered.
 
 ## Angular's equivalent
 
@@ -91,3 +91,4 @@ function CounterController() {
 ```
 
 What's happening here? Well, whenever the user clicks on our button, our `incrementCounter` function gets called. We can then access our model value (`this.counter`) inside that function, and update it itself plus one. Angular then notices that the model has changed, and will update our view to reflect this.
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/angular-event-directives-readme'>Angular Event Based Directives</a> on Learn.co and start learning to code for free.</p>
