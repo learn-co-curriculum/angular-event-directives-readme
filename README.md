@@ -50,7 +50,7 @@ We already have a way to do events in JavaScript without any plugins. Why do we 
 
 Angular allows us to pass all the event handling over to them. We don't have to worry about browser compatibility or even unbinding our events at the sacrifice of using the built-in directives for event handling instead. A small price to pay for consistent event handling in all browsers. 
 
-Angular also has the concept of a "digest cycle". This, at a high level, is a function that keeps all of our view and model in sync with each other (we will be going into this in a lot more detail later on). The built-in directives ensure that the digest cycle is ran, keeping our view and model synchronised if we were to update our model in response to an event.
+Angular also has the concept of a "digest cycle". This, at a high level, is a function that keeps all of our view and model in sync with each other (we will be going into this in a lot more detail later on). The built-in directives ensure that the digest cycle is ran, keeping our view and model synchronized if we were to update our model in response to an event.
 
 ## Calling our own functions
 
