@@ -17,7 +17,7 @@ Now that we've talked about what a directive actually is, let's go into what an 
 
 ## Event based directives
 
-If you've ever done a lot of JavaScript before, you would have come into contact with event listeners. These are functions that get called whenever a specific behaviour happens that we are looking out for. Either of the following might be familiar to you:
+If you've ever done a lot of JavaScript before, you would have come into contact with event listeners. These are functions that get called whenever a specific behavior happens that we are looking out for. Either of the following might be familiar to you:
 
 ```js
 input.addEventListener('click', function (e) {
@@ -34,11 +34,11 @@ input.onclick = function (e) {
 <input onclick="myFunction()" />
 ```
 
-These would all fire off of a function when a key was pressed inside of our input.
+These would all fire off a function when a key was pressed inside of our input.
 
 ## Angular's equivalent
 
-Instead, in Angular, we use the built-in `ng-click` directive, and pass in the function we want to be called.
+Instead, in Angular, we use the built-in `ng-click` directive and pass in the function we want to be called.
 
 ```html
 <input ng-click="vm.myFunction()" />
@@ -46,11 +46,11 @@ Instead, in Angular, we use the built-in `ng-click` directive, and pass in the f
 
 ## Why do we do this?
 
-We already have a way to do events in JavaScript without any plugins. Why do we have to do things differently inside Angular?
+We already have a way to handle events in JavaScript without any plugins. Why do we have to do things differently inside Angular?
 
-Angular allows us to pass all the event handling over to them. We don't have to worry about browser compatibility or even unbinding our events at the sacrifice of using the built-in directives for event handling instead. A small price to pay for consistent event handling in all browsers. 
+Angular allows us to pass all the event handling over to them. The sacrifice of using the built-in directives for event handling means that we don't have to worry about browser compatibility or unbinding our events. A small price to pay for consistent event handling in all browsers. 
 
-Angular also has the concept of a "digest cycle". This, at a high level, is a function that keeps all of our view and model in sync with each other (we will be going into this in a lot more detail later on). The built-in directives ensure that the digest cycle is ran, keeping our view and model synchronized if we were to update our model in response to an event.
+Angular also has the concept of a "digest cycle". This, at a high level, is a function that keeps the whole view and model ecosystem in sync (we will be going into this in a lot more detail later on). The built-in directives ensure that the digest cycle is run, keeping our view and model synchronized if we were to update our model in response to an event.
 
 ## Calling our own functions
 
@@ -90,4 +90,4 @@ function CounterController() {
 }
 ```
 
-What's happening here? Well, whenever the user clicks on our button, our `incrementCounter` function gets called. We can then access our model value (`this.counter`) inside that function, and update it itself plus one. Angular then notices that the model has changed, and will update our view to reflect this.
+What's happening here? Well, whenever the user clicks on our button, our `incrementCounter` function gets called. We can then access our model value (`this.counter`) inside that function and add one to its current value. Angular then notices that the model has changed and will update our view to reflect this.
